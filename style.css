@@ -1,0 +1,152 @@
+/* Сброс */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: rgba(20, 25, 30, 1.0);
+    color: #fff;
+}
+
+/* Верхняя панель */
+.topbar {
+    width: 100%;
+    background: rgba(20, 25, 30, 1.0);
+    border-bottom: 1px solid #222;
+}
+
+/* Внутренний контейнер */
+.topbar_inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 24px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Бренд */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand_logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.brand_name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+/*Контент*/
+.page {
+    min-height: calc(100vh - 61px);
+    display: flex;
+}
+
+.page-center {
+    margin: auto;
+    text-align: center;
+}
+
+.main-text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: #eaeaea;
+    opacity: 0.85;
+}
+
+/*Социальные кнопки справа*/
+.social {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* расстояние между иконками */
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    color: #eaeaea;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/*Анимация смены страниц*/
+.page {
+    animation: pageFadeIn 0.35s ease;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        /*transform: translateY(8px);*/
+    }
+    to {
+        opacity: 1;
+        /*transform: translateY(0);*/
+    }
+}
+
+/*Контейнер контента*/
+#content {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#content.fade-out {
+    opacity: 0;
+    transform: translateY(6px);
+}
+
+#content.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.accent {
+    background: linear-gradient(
+        90deg,
+        #0a5aaa,
+        #4fb7ff,
+        #0a5aaa
+    );
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: accentFlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes accentFlow {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}
