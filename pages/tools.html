@@ -1,0 +1,57 @@
+<section class="page tools-page">
+    <div class="page-header">
+        <h1 class="page-title">Генераторы</h1>
+        <p class="page-subtitle">Выберите нужный генератор для создания конфигураций</p>
+    </div>
+
+    <!-- Фильтры категорий -->
+    <div class="category-filters">
+        <button class="category-filter active" data-category="all">Все</button>
+        <button class="category-filter" data-category="darkrp">DarkRP</button>
+        <button class="category-filter" data-category="gmdonate">GMDonate</button>
+    </div>
+
+    <!-- Сетка генераторов -->
+    <div class="generators-grid">
+        <!--DarkRP Профессии-->
+        <div class="generator-card" data-categories="darkrp" data-status="soon"> <!--"available" "soon" "beta"-->
+            <div class="generator-icon"></div>
+            <div class="generator-content">
+                <div class="generator-header">
+                    <h3 class="generator-title">Профессии</h3>
+                    <span class="status-badge soon">Скоро</span>
+                </div>
+                <p class="generator-description">Генератор профессий для DarkRP</p>
+                <div class="generator-tags">
+                    <span class="tag">DarkRP</span>
+                </div>
+            </div>
+            <!--<button class="generator-button">Открыть</button>-->
+            <button class="generator-button" disabled>Скоро</button>
+        </div>
+
+        <!--ГМ Донат предмет-->
+        <div class="generator-card" data-categories="gmdonate" data-status="soon"> <!--"available" "soon" "beta"-->
+            <div class="generator-icon"></div>
+            <div class="generator-content">
+                <div class="generator-header">
+                    <h3 class="generator-title">Предметы доната</h3>
+                    <span class="status-badge soon">Скоро</span>
+                </div>
+                <p class="generator-description">Генератор предметов для GMDonate</p>
+                <div class="generator-tags">
+                    <span class="tag">GMDonate</span>
+                </div>
+            </div>
+            <!--<button class="generator-button">Открыть</button>-->
+            <button class="generator-button" disabled>Скоро</button>
+        </div>
+    </div>
+
+    <!-- Пустое состояние -->
+    <div class="empty-state" id="emptyState" style="display: none;">
+        <div class="empty-icon">🔍</div>
+        <h3>Ничего не найдено</h3>
+        <p>Попробуйте выбрать другую категорию</p>
+    </div>
+</section>
